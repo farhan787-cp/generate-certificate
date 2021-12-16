@@ -1,0 +1,245 @@
+<!-- id-3 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certificate</title>
+    <link href="https://db.onlinewebfonts.com/c/84ae358e627d67d90bd613fcedc20c10?family=Edwardian+Script+ITC"
+          rel="stylesheet" type="text/css" />
+</head>
+
+<style>
+    html {
+        font-size: 80%;
+    }
+
+    /* .container{
+        font-size: 10px;
+    } */
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .templateBackground {
+        width: 55rem;
+        height: 40rem;
+        position: relative;
+    }
+
+    .templateBackgroundImage {
+        width: 55rem;
+        height: 40rem;
+
+    }
+
+    .details {
+        position: absolute;
+        top: 12rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .certificateText {
+        color: #373C59;
+        font-size: 2.5rem;
+        font-family: Georgia;
+        font-weight: 400;
+    }
+
+    .certificateTitle {
+        margin-top: 1rem;
+        color: #666666;
+        font-weight: normal;
+        font-family: 'Manrope', sans-serif;
+        font-size: 1rem;
+    }
+
+    .certificateSubTitle {
+        font-size: 1rem;
+        font-weight: normal;
+        color: #666666;
+        font-family: 'Manrope', sans-serif;
+
+    }
+
+    .certificateOwnerLarge {
+        font-size: 3.7rem;
+        margin-top: 2rem;
+        margin-bottom: 1.2rem;
+        font-family: Edwardian Script ITC;
+        font-weight: 400;
+    }
+
+    .certificateOwnerSmall {
+        font-size: 2.7rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-family: Edwardian Script ITC;
+        font-weight: 400;
+    }
+
+    .certificateCourseName {
+        color: #373C59;
+        font-weight: bold;
+        margin-top: 0.45rem;
+        margin-bottom: 0.75rem;
+        font-family: 'Manrope', sans-serif;
+        font-size: 1rem;
+    }
+
+    .certificateLogoContainer {
+        position: absolute;
+        right: 23.7rem;
+        top: 4.5rem;
+    }
+
+    .certificateLogo {
+        width: 6.5rem;
+    }
+
+    .signatureImg {
+        width: 8.9rem;
+        height: 2.2rem;
+        border-bottom: solid 0.06rem #666666;
+        padding: 0px 9px 6px 9px;
+    }
+
+    .certificateDateSignatureContainer {
+        display: flex;
+        justify-content: space-evenly;
+        position: absolute;
+        width: 100%;
+        bottom: 5rem;
+    }
+
+    .certificateDateContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .certificateDate {
+        color: #373C59;
+        border-top: solid 0.06rem #666666;
+        text-align: center;
+        margin-top: 0.45rem;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        padding-top: 0.37rem;
+    }
+
+    .certificateSignatureLarge {
+        color: #373C59;
+        /* border-top: solid 0.06rem #666666; */
+        text-align: center;
+        margin-top: 0.2rem;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        padding-top: 0.37rem;
+        min-height: 10px;
+    }
+
+    .certificateSignatureSmall {
+        color: #373C59;
+        /* border-top: solid 0.06rem #666666; */
+        text-align: center;
+        margin-top: 0.2rem;
+        font-family: 'DM Sans', sans-serif;
+        font-size: .8rem;
+        font-weight: 500;
+        padding-top: 0.37rem;
+        min-height: 10px;
+    }
+
+    .signatureImgContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+
+<body>
+<div class="container">
+    <div class="templateBackground">
+        <img src="https://storage.googleapis.com/cp-prod-whitelabel-assets-as-sth1-gcs-dgte34/production/single/learn/d9af239b-527e-4fe0-9173-5fe63ffbb52e.svg"
+             class="templateBackgroundImage" id="templateImage" />
+        <div class="certificateLogoContainer"><img class="certificateLogo" id="instituteLogo" src=<%= orgLogo %>
+            alt="logo"></div>
+        <div class="details">
+            <div>
+                <div class="certificateText">
+                    Certificate of appreciation
+                </div>
+            </div>
+            <div class="certificateTitle" id="title">
+                <%= title %>
+            </div>
+            <div class="certificateOwnerLarge" id="certificateHolder">
+                <%= name %>
+            </div>
+            <div class="certificateSubTitle">
+                <%= subtitle %>
+            </div>
+            <div class="certificateCourseName" id="courseName">
+                <%= courseName %>
+            </div>
+            <div class="certificateSubTitle" id="subtitle">Your hard work and dedication is sincerely appreciated
+            </div>
+        </div>
+        <div class="certificateDateSignatureContainer">
+            <div class="certificateDateContainer">
+                <div>
+                    <%= date %>
+                </div>
+                <div class="certificateDate">
+                    Date
+                </div>
+            </div>
+            <div>
+                <div class="signatureImgContainer">
+                    <img class="signatureImg" id="signature" src=<%= signature %>
+                    alt="logo">
+                </div>
+                <div class="certificateSignatureLarge" id="orgName">
+                    <%= orgName %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+
+  let certificateHolderName = document.getElementById('certificateHolder').innerHTML;
+
+  if (certificateHolderName.length > 24) {
+    document.getElementById('certificateHolder').className = 'certificateOwnerSmall';
+  }
+
+  let orgName = document.getElementById('orgName').innerHTML;
+
+  if (orgName.length > 46) {
+    document.getElementById('orgName').className = 'certificateSignatureSmall';
+  }
+
+
+</script>
+
+</html>

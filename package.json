@@ -1,0 +1,25 @@
+{
+  "name": "generate-certificate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.14.1",
+    "chrome-aws-lambda": "^2.1.1",
+    "ejs": "^3.1.6",
+    "google-auth-library": "^7.9.2",
+    "node-html-to-image": "^3.2.0",
+    "puppeteer": "^3.0.4",
+    "serverless-apigw-binary": "^0.4.4"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^2.0.0",
+    "serverless-google-cloudfunctions": "^4.4.0"
+  }
+}
